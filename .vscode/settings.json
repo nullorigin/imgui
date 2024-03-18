@@ -1,0 +1,4 @@
+{
+    "cmake.configureOnOpen": false,
+    "cmake.mergedCompileCommands": "compile_commands.json"
+}

@@ -33,17 +33,17 @@
 // - The default dear imgui styles will be impacted by this change (alpha values will need tweaking).
 
 // FIXME: cfg.OversampleH, OversampleV are not supported (but perhaps not so necessary with this rasterizer).
-
+#include <cstdint>
 #include "imgui.h"
 #ifndef IMGUI_DISABLE
+#include "imgui_internal.h"
 #include "imgui_freetype.h"
-#include "imgui_internal.h"     // ImMin,ImMax,ImFontAtlasBuild*,
-#include <stdint.h>
-#include <ft2build.h>
-#include FT_FREETYPE_H          // <freetype/freetype.h>
-#include FT_MODULE_H            // <freetype/ftmodapi.h>
-#include FT_GLYPH_H             // <freetype/ftglyph.h>
-#include FT_SYNTHESIS_H         // <freetype/ftsynth.h>
+#include <ftmodapi.h>
+#include <ftsynth.h>
+#include FT_GLYPH_H
+#include FT_OUTLINE_H
+#include FT_ADVANCES_H
+#include FT_TRUETYPE_IDS_H
 
 #ifdef IMGUI_ENABLE_FREETYPE_LUNASVG
 #include FT_OTSVG_H             // <freetype/otsvg.h>
